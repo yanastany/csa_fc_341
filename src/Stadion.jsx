@@ -12,7 +12,9 @@ export function Stadion() {
       }}
       noValidate
       autoComplete="off"
+      
     >
+      <div id="tabel-stadioane">
       <div>
         <TextField
           required
@@ -164,7 +166,11 @@ export function Stadion() {
           variant="standard"
         />
         <br></br>
-        <NavLink to="/">home</NavLink>
+        <NavLink to="/">
+        <button>INAPOI ACASA</button>
+        </NavLink>
+
+      </div>
       </div>
     </Box>
   );
