@@ -8,8 +8,21 @@ import {background1} from './Imagini/background1.png'
 
 function App() {
   return (
+
+
     <div className="App">
       {/* <header className="App-header"> */}
+
+      <div class="header">
+      <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter"> SQUAD MANAGER</h3>
+    </div>
+  </div>
+</div>
+        {/* <h1>SQUAD MANAGER</h1> */}
+        </div>
         
       <main class="site-wrapper">
       <div class="pt-table desktop-768" >
@@ -20,9 +33,7 @@ function App() {
                         <div class="row">
                             <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                                 <div class="page-title  home text-center">
-                                  <span class="heading-page" > Squad Manager
-                                  </span>
-                                    <p class="mt20">Alege o categorie si sa inceapa jocul !</p>
+                                  
                                 </div>
                             </div>
 
