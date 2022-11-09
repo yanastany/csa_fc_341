@@ -6,7 +6,6 @@ import {NavLink} from "react-router-dom";
 import {background1} from './Imagini/background1.png'
 
 
-
 function App() {
   return (
     <div className="App">
@@ -25,7 +24,9 @@ function App() {
                                   </span>
                                     <p class="mt20">Alege o categorie si sa inceapa jocul !</p>
                                 </div>
+                            </div>
 
+                            <div>
                                 <div class="hexagon-menuclear">
                                     <div class="hexagon-item">
                                         <div class="hex-item">
@@ -235,9 +236,9 @@ function App() {
          Best Proiect - CSA FC 341 
         </p>
          */}
-        <br></br>
+        {/* <br></br>
         <button onClick={getStadioane} id="button">Testare StadiumController</button>
-        <br></br>
+        <br></br> */}
         {/* <NavLink to="/tostadion">Du-ma la stadion</NavLink> */}
         <br></br>
         {/* <button onClick={getPrimele3Meciuri} id="button">Afiseaza primele 3 meciuri din lista</button> */}

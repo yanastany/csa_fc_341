@@ -58,7 +58,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
-  background-color: #bab019;
+  /* background-color: #bab019; */
+  background-image: url(https://wallpapercave.com/wp/wp7660605.jpg);
+  background-size:cover;
   overflow-x:hidden;
   color: #ababab; }
 
@@ -80,7 +82,7 @@ body {
 
 .heading-page
 {
-      text-transform: uppercase;
+    text-transform: uppercase;
     font-size: 43px;
     font-weight: bolder;
     letter-spacing: 3px;
@@ -196,7 +198,7 @@ textarea, label {
   vertical-align: middle; }
 
 .pt-tablecell-background{
-  background-color: #bab019;
+  background-color: transparent;
   background-size: "cover";
   height: 100vh;
   margin-top: 10px;
@@ -309,7 +311,7 @@ textarea, label {
 /*------------------------------------------------
 	Start Styling
 -------------------------------------------------*/
-.mt20{margin-top:20px; color: #000000;}
+.mt20{margin-top:15px; color: white;}
 .site-wrapper {
   border-top: 4px solid #750af9; }
 
@@ -323,7 +325,7 @@ textarea, label {
 .page-title {
   opacity: 99%;
   margin-bottom: 75px;
-  margin-top: 50px; }
+  margin-top: 25px; }
   .page-title img {
     margin-bottom: 20px; }
   .page-title h2 {
@@ -392,10 +394,6 @@ textarea, label {
     Home Page
 -------------------------------------------------*/
 
-.hexagon-item:first-child {
-    margin-left: 0;
-}
-
 .page-home {
   background-position: center center;
   background-repeat: no-repeat;
@@ -415,9 +413,12 @@ textarea, label {
   width: 200px;
   height: 160px;
   float:left;
-  /* display: block; */
+  display: block;
   /* margin-left: px; */
-  margin-top: 30px;
+  margin-top: -10px;
+  margin-right: 55px;
+  margin-bottom: 125px;
+  margin-left: 55px;
   z-index: 0;
   position: relative;
   -webkit-transform: rotate(30deg);
@@ -426,7 +427,10 @@ textarea, label {
   -o-transform: rotate(30deg);
   transform: rotate(30deg); }
   .hexagon-item:first-child {
-    margin-left: 0; }
+    margin-left: 55px; }
+  .hexagon-item:nth-child(4n+2){
+    margin-right: 675px;
+  }
   .hexagon-item:hover {
     z-index: 1; }
     .hexagon-item:hover .hex-item:last-child {
@@ -488,9 +492,9 @@ textarea, label {
   .hex-item div {
     box-sizing: border-box;
     position: absolute;
-    top: 0;
+    top: -8px;
     width: 100px;
-    height: 173.20508px;
+    height: 190px;
     -webkit-transform-origin: center center;
     -moz-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -531,7 +535,7 @@ textarea, label {
 
 .hex-content {
   color: #fff;
-  display: block;
+  display: inline-block;
   height: 180px;
   margin: 0 auto;
   position: relative;
@@ -608,7 +612,7 @@ textarea, label {
 }
 
 .hexagon-item:first-child {
-    margin-left: 0;
+    margin-left: 55px;
 }
 
 .pt-table.desktop-768 .pt-tablecell {
