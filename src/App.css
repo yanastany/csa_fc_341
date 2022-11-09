@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color:#01519e;
 }
 
 .App-logo {
@@ -16,7 +17,7 @@
 
 .header {
   text-align: center;
-  background: #cdbb05;
+  background-color:#01519e;
   font-size: 130%;
 }
 
@@ -62,6 +63,7 @@
   /* background-color: #bab019; */
   background-image: url(https://wallpapercave.com/wp/wp7660605.jpg);
   background-size:100%;
+  padding-bottom: 5%;
   overflow-x:hidden;
   color: #ababab;
    }
@@ -341,7 +343,7 @@ textarea, label {
   .page-title p { 
     font-size: 25px; } /*alege o categorie si sa inceapa jocul*/
   .page-title .title-bg {
-    color: rgba(30, 37, 48, 0.07);
+    color: rgba(196, 218, 255, 0.07);
     font-size: 158px;
     left: 0;
     letter-spacing: 10px;
@@ -430,7 +432,8 @@ textarea, label {
   -o-transform: rotate(30deg);
   transform: rotate(30deg); }
   .hexagon-item:first-child {
-    margin-left: 10%; }
+    margin-left: 10%;
+   }
   .hexagon-item:nth-child(4n+2){
     margin-right: 20%;
   }
@@ -455,7 +458,7 @@ textarea, label {
         height: 5px; }
     .hexagon-item:hover .hex-item div::before,
     .hexagon-item:hover .hex-item div::after {
-      background-color: #025195; }
+      background-color: #debb0e; }
     .hexagon-item:hover .hex-content svg {
       -webkit-transform: scale(0.97);
       -moz-transform: scale(0.97);
@@ -537,7 +540,7 @@ textarea, label {
       transform: rotate(120deg); }
 
 .hex-content {
-  color: #fff;
+  color: rgb(233, 213, 0);
   display: inline-block;
   height: 180px;
   margin: 0 auto;
@@ -710,10 +713,10 @@ textarea, label {
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #001b6e 0%,
-    #034f99 29%,
-    #be0003 67%,
-    #034f99  100%
+    #001a69 0%,
+    #fff700 29%,
+    #fc0000 67%,
+    #002346  100%
   );
   background-size: auto auto;
   background-clip: border-box;
