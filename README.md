@@ -1,6 +1,6 @@
 # Squad Manager - Web Application
 
-“Squad Manager” este o aplicatie web pentru gestionarea unui club sportiv. Aceasta este adresata in mod special cluburilor care isi desfasoara activitatea in campionatele de fotbal.
+“Squad Manager” este o aplicatie web pentru gestionarea unui club sportiv. Aceasta este adresata in mod special echipelor care isi desfasoara activitatea in campionatele de fotbal.
 
 Aplicatia a fost dezvoltata pentru a usura munca cluburilor, ajutandu-i pe oamenii ce activeaza in industria sportiva sa gestioneze mai facil clubul, avand acces oricand la toate informatiile echipei.
 
