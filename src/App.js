@@ -196,12 +196,12 @@ function App() {
                                             <div></div>
                                         </div>
                                         <a  class="hex-content">
-                                        <Link to="/" style={{width: '100px'}}>
+                                        <Link to="/toweather" style={{width: '100px'}}>
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-map-signs"></i>
                                                 </span>
-                                                <span class="title">NIMIC</span>
+                                                <span class="title">Busu gen</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </Link>
