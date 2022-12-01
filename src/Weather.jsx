@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, TextField, Typography } from "@mui/material";
+import { getStadioane } from "./Controlere/StadiumController";
 import './Weather.css';
 
 const api = {
@@ -12,6 +13,7 @@ export function Weather() {
     const [weather, setWeather] = useState({});
 
     const searchPressed = () => {
+        console.log(getStadioane());
         fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
             .then((res) => res.json())
             .then((result) => {

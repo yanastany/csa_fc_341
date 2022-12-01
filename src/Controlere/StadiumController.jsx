@@ -6,7 +6,7 @@ const db = getFirestore(app);
 
 const stadiumCollection = collection(db, "stadion");
 
-export async function getStadioane(db) {
+export async function getStadioane() {
     const q = query(stadiumCollection, where("adresa", "!=", null));
     const snapshot = await getDocs(q);
     snapshot.forEach((doc) =>{
