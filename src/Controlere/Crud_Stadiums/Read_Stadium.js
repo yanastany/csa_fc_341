@@ -61,14 +61,14 @@ function Read_Stadiums(){
     },[])
     
     const { items, requestSort, sortConfig } = useSortableData(stadioane);
-    const getClassNamesFor = (name) => {
+    const getClassNamesFor = (denumire) => {
         if (!sortConfig) {
             return;
         }
-        return sortConfig.key === name ? sortConfig.direction : undefined;
+        return sortConfig.key === denumire ? sortConfig.direction : undefined;
         };
 
-console.log(stadioane)
+//console.log(stadioane)
     return(
         
    
@@ -79,23 +79,23 @@ console.log(stadioane)
             
                 <Table.HeaderCell className='titlu'><button
       type="button"
-      onClick={() => requestSort('name')}
-      className={getClassNamesFor('name')}
+      onClick={() => requestSort('denumire')}
+      className={getClassNamesFor('denumire')}
     >Name</button></Table.HeaderCell>
                 <Table.HeaderCell className='titlu'><button
       type="button"
-      onClick={() => requestSort('capacity')}
-      className={getClassNamesFor('capacity')}
+      onClick={() => requestSort('capacitate')}
+      className={getClassNamesFor('capacitate')}
     >Capacity</button></Table.HeaderCell>
                 <Table.HeaderCell className='titlu'><button
       type="button"
-      onClick={() => requestSort('surface')}
-      className={getClassNamesFor('surface')}
+      onClick={() => requestSort('tip_gazon')}
+      className={getClassNamesFor('tip_gazon')}
     >Surface</button></Table.HeaderCell>
                 <Table.HeaderCell className='titlu'><button
       type="button"
-      onClick={() => requestSort('address')}
-      className={getClassNamesFor('address')}
+      onClick={() => requestSort('adresa')}
+      className={getClassNamesFor('adresa')}
     >Address</button></Table.HeaderCell>
                 
                 
@@ -105,7 +105,7 @@ console.log(stadioane)
 
         <Table.Body>
         
-        {stadioane && stadioane.map((data) =>  {
+        {items.map((data) =>  {
 return (
 <Table.Row key = {data.denumire}>
 
