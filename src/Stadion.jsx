@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Read_Stadium from './Controlere/Crud_Stadiums/Read_Stadium';
-
+import Add_Stadium from './Controlere/Crud_Stadiums/Add_Stadium';
 export function Stadion() {
   return (
     <div className="main">
@@ -13,6 +13,8 @@ export function Stadion() {
        <Read_Stadium/>
     
   </div>
+
+ 
   
   </div>
   );

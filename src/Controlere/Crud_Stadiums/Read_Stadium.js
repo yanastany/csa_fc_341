@@ -1,10 +1,12 @@
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 import { Table,Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
 
 import {app} from '../../DatabaseConnection';
+import { doc, deleteDoc } from "firebase/firestore";
 import React,{useState,useEffect} from 'react';
 const db = getFirestore(app);
-
+let param ="width=500,height=500";
 const useSortableData = (items, config = null) => {
     const [sortConfig, setSortConfig] = React.useState(config);
   
@@ -41,6 +43,30 @@ const useSortableData = (items, config = null) => {
 
 
 function Read_Stadiums(){
+
+  const docRef = doc(db, "stadion", "id");
+
+deleteDoc(docRef)
+.then(() => {
+    //console.log("Entire Document has been deleted successfully.")
+})
+.catch(error => {
+    console.log(error);
+})
+  function update(x){
+    
+    localStorage.setItem('stadium_id',x)
+  }
+  function onDelete(id) {
+    deleteDoc(doc(db, "stadion", id));
+    window.location.reload();
+}
+
+  function add_stadium(){
+    
+    window.open('http://localhost:3000/add_stadium','_parent','Add a stadium',param);
+    
+  }
   const [stadioane, setStadioane] = useState([]);
   
   const fetchStadioane = async()=>{
@@ -48,16 +74,21 @@ function Read_Stadiums(){
     let data =await getDocs(response).then((querySnapshot) => {
 
       querySnapshot.forEach(element => {
+        //console.log(element.id);
+          //setStadioane(arr => [...arr, "id: '"+element.id+"'"])
           var date = element.data();
-          setStadioane(arr => [...arr , date]);
+          date.id = element.id;
+          
 
+          //console.log(date);
+          setStadioane(arr => [...arr , date]);  
       });
   });
-
   }
 
     useEffect(()=>{
       fetchStadioane();
+
     },[])
     
     const { items, requestSort, sortConfig } = useSortableData(stadioane);
@@ -70,8 +101,11 @@ function Read_Stadiums(){
 
 //console.log(stadioane)
     return(
-        
-   
+        <div>
+          <Button type="button" className="bt4" onClick={()=>add_stadium()}>
+              Add a stadium
+          </Button>
+
         <Table singleLine className='tabel'>
         <Table.Header className='tt1'>
             <Table.Row>
@@ -113,14 +147,21 @@ return (
           <Table.Cell >{data.capacitate}</Table.Cell>
           <Table.Cell >{data.tip_gazon}</Table.Cell>
           <Table.Cell >{data.adresa}</Table.Cell>
-  
- 
+          <Table.Cell>
+        <Button onClick={() =>onDelete(data.id)}>Delete</Button>
+        </Table.Cell> 
+        <Link to='/update_stadium'>
+          <Table.Cell> 
+        <Button onClick={() =>update(data.id)}>Update</Button>
+        </Table.Cell>
+        </Link>
+      
 
 </Table.Row>
 )})}
         </Table.Body>
     </Table>
-   
+    </div>
     );
 }
 
