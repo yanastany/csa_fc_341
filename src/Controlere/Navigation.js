@@ -1,16 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './Navigation.css';
+import './Navigation.scss';
 function Navigation() {
   return (
-    <div>
+    <div >
      
     <div className="navigation ">
       <nav className="navbar navbar-expand  ">
         <div className="container">
 
           <div>
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav ml-auto" class="menu">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
                   Home
